@@ -15,23 +15,24 @@ Mark(1) = "締"
 Mark(2) = "試"
 Mark(3) = "合"
 Mark(4) = "手"
-Begin(0) = 8
-Begin(1) = 39
-Begin(2) = 67
+Begin(0) = 10
+Begin(1) = 41
+Begin(2) = 69
 End Function
 
 Sub addUniversity()
+Attribute addUniversity.VB_ProcData.VB_Invoke_Func = "J\n14"
 '書き換えのためセルをクリア
-Range("I3:CT26").Clear
+Range("K3:CV26").Clear
 
 Dim Schedule(5) As Date
 Call DefineData
 
 For i = 3 To 26 Step 1
-    For j = 4 To 8 Step 1
+    For j = 6 To 10 Step 1
     ' 値があるなら日付を取得
-        If IsEmpty(Cells(i, 4)) = False Then
-            Schedule(j - 4) = Cells(i, j)
+        If IsEmpty(Cells(i, j)) = False Then
+            Schedule(j - 6) = Cells(i, j)
         End If
         
     Next j
@@ -59,7 +60,7 @@ For i = 3 To 26 Step 1
 Next i
 
 '罫線を描画
-Range("I3:CT26").Borders.LineStyle = True
+Range("I3:CV26").Borders.LineStyle = True
 
 
 End Sub

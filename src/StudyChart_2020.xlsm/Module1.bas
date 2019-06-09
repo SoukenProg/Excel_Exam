@@ -20,20 +20,20 @@ Begin(1) = 39
 Begin(2) = 67
 End Function
 
+
 Sub addUniversity()
-Attribute addUniversity.VB_Description = "入試情報の更新"
 Attribute addUniversity.VB_ProcData.VB_Invoke_Func = "J\n14"
 '書き換えのためセルをクリア
-Range("I4:CT26").Clear
+Range("K4:CV26").Clear
 
 Dim Schedule(5) As Date
 Call DefineData
 
 For i = 4 To 26 Step 1
-    For j = 4 To 8 Step 1
+    For j = 6 To 10 Step 1
     ' 値があるなら日付を取得
-        If IsEmpty(Cells(i, 4)) = False Then
-            Schedule(j - 4) = Cells(i, j)
+        If IsEmpty(Cells(i, j)) = False Then
+            Schedule(j - 6) = Cells(i, j)
         End If
         
     Next j
@@ -61,8 +61,10 @@ For i = 4 To 26 Step 1
 Next i
 
 '罫線を描画
-Range("I4:CT26").Borders.LineStyle = True
+Range("I4:CV26").Borders.LineStyle = True
 
 
 End Sub
+
+
 
