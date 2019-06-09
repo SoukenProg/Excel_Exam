@@ -15,9 +15,9 @@ Mark(1) = "’÷"
 Mark(2) = ""
 Mark(3) = "‡"
 Mark(4) = "è"
-Begin(0) = 10
-Begin(1) = 41
-Begin(2) = 69
+Begin(0) = 11
+Begin(1) = 42
+Begin(2) = 70
 End Function
 
 
@@ -34,6 +34,10 @@ For i = 4 To 26 Step 1
     ' ’l‚ª‚ ‚é‚È‚ç“ú•t‚ğæ“¾
         If IsEmpty(Cells(i, j)) = False Then
             Schedule(j - 6) = Cells(i, j)
+            
+        Else
+        Schedule(j - 6) = #11/30/2019#
+        
         End If
         
     Next j
@@ -51,6 +55,10 @@ For i = 4 To 26 Step 1
         
         Cells(i, r).Interior.Color = Color(j)
         Cells(i, r).Value = Mark(j)
+        
+        ElseIf m = 12 Then
+        Cells(i, 11).Interior.Color = Color(j)
+        Cells(i, 11).Value = Mark(j)
         End If
         
     Next j

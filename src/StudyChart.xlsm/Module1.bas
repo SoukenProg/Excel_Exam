@@ -15,9 +15,9 @@ Mark(1) = "締"
 Mark(2) = "試"
 Mark(3) = "合"
 Mark(4) = "手"
-Begin(0) = 10
-Begin(1) = 41
-Begin(2) = 69
+Begin(0) = 11
+Begin(1) = 42
+Begin(2) = 70
 End Function
 
 Sub addUniversity()
@@ -33,6 +33,10 @@ For i = 3 To 26 Step 1
     ' 値があるなら日付を取得
         If IsEmpty(Cells(i, j)) = False Then
             Schedule(j - 6) = Cells(i, j)
+        
+        Else
+        Schedule(j - 6) = #11/30/2019#
+        
         End If
         
     Next j
@@ -50,12 +54,17 @@ For i = 3 To 26 Step 1
         
         Cells(i, r).Interior.Color = Color(j)
         Cells(i, r).Value = Mark(j)
+        
+        ElseIf m = 12 Then
+        Cells(i, 11).Interior.Color = Color(j)
+        Cells(i, 11).Value = Mark(j)
+        
         End If
         
     Next j
     '値を有効範囲外に
     For j = 0 To 4 Step 1
-    Schedule(j) = #12/31/2020#
+    Schedule(j) = #11/30/2020#
     Next j
 Next i
 
