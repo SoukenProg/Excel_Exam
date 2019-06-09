@@ -4,6 +4,7 @@ Dim Mark(5) As String
 Dim Begin(3) As Integer
 
 Function DefineData()
+'データの定義
 Color(0) = RGB(255, 188, 112)
 Color(1) = RGB(255, 217, 112)
 Color(2) = RGB(112, 255, 214)
@@ -22,11 +23,15 @@ End Function
 Sub addUniversity()
 Attribute addUniversity.VB_Description = "入試情報の更新"
 Attribute addUniversity.VB_ProcData.VB_Invoke_Func = "J\n14"
+'書き換えのためセルをクリア
+Range("I3:CT26").Clear
+
 Dim Schedule(5) As Date
 Call DefineData
 
 For i = 3 To 26 Step 1
     For j = 4 To 8 Step 1
+    ' 値があるなら日付を取得
         If IsEmpty(Cells(i, 4)) = False Then
             Schedule(j - 4) = Cells(i, j)
         End If
@@ -39,16 +44,22 @@ For i = 3 To 26 Step 1
         m = Month(Schedule(j))
         d = Day(Schedule(j))
         
+        '有効範囲内なら色付け
         If m <= 3 And m >= 1 Then
         Dim r As Integer
-        r = Begin(m - 1) + j
+        r = Begin(m - 1) + d
         
-        Cells(i, r).Interior.ColorIndex = Color(j)
-        Cells(i, r).Text = Mark(j)
+        Cells(i, r).Interior.Color = Color(j)
+        Cells(i, r).Value = Mark(j)
         End If
         
     Next j
+    '値を有効範囲外に
+    For j = 0 To 4 Step 1
+    Schedule(j) = #12/31/2020#
+    Next j
 Next i
+
 
 End Sub
 
