@@ -15,9 +15,9 @@ Mark(1) = "’÷"
 Mark(2) = ""
 Mark(3) = "‡"
 Mark(4) = "è"
-Begin(0) = 8
-Begin(1) = 39
-Begin(2) = 67
+Begin(0) = 10
+Begin(1) = 41
+Begin(2) = 69
 End Function
 
 
