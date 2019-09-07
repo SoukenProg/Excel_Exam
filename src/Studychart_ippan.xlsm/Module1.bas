@@ -16,9 +16,9 @@ Mark(1) = "締"
 Mark(2) = "試"
 Mark(3) = "合"
 Mark(4) = "手"
-Begin(0) = 19
-Begin(1) = 50
-Begin(2) = 80
+Begin(0) = 22
+Begin(1) = 53
+Begin(2) = 81
 '試験日コード用
 For i = 0 To 5 Step 1
     For j = 0 To 5 Step 1
@@ -32,7 +32,7 @@ End Function
 Sub addUniversity()
 Attribute addUniversity.VB_ProcData.VB_Invoke_Func = "J\n14"
 '書き換えのためセルをクリア
-Range("L4:CV26").Clear
+Range("L4:DF26").Clear
 
 Dim Schedule(5) As Date
 Call DefineData
@@ -110,7 +110,7 @@ For i = 4 To 26 Step 1
     
 Next i
 '罫線を描画
-Range("L4:CV26").Borders.LineStyle = True
+Range("L4:DF26").Borders.LineStyle = True
 
 
 End Sub
