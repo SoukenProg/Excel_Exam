@@ -7,7 +7,7 @@ Souken521が趣味で作ったExcelを使って試験日程を管理するため
 .xlsmファイルのマクロが実行できることが前提条件となります。
  
  ## ダウンロード
- [こちら](https://1drv.ms/u/s!Aio0rhFpTLcr0g-2WJZiI1yj76oL?e=wlFjFf)からどうぞ。
+ [こちら](https://1drv.ms/u/s!Aio0rhFpTLcrwQ-kYS8RhG0rnafO?e=unspfb)からどうぞ。
 
 ### 基本の使い方
   A列からJ列に情報を入れ、左下の「更新」ボタンを押下することでV列以降に試験日程を反映させることができます。
