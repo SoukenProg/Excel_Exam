@@ -1,5 +1,7 @@
 Studychart_ippan.xlsm
 src/Studychart_ippan.xlsm/*
 bin/~*
+!*.bas
 bin/Studychart_ippan.xlsm
 vbsc.wsf
+vbac.wsf
