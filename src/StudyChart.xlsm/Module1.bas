@@ -28,7 +28,7 @@ Columns("BS").Hidden = True
 
 
 '‘‚«Š·‚¦‚Ì‚½‚ßƒZƒ‹‚ğƒNƒŠƒA
-Range("I4:DG27").Clear
+Range("T4:DG27").Clear
 
 Dim Schedule(5) As Date
 Call DefineData
@@ -115,7 +115,7 @@ For i = 4 To 27 Step 1
 Next i
 
 'Œrü‚ğ•`‰æ
-Range("I4:DG27").Borders.LineStyle = True
+Range("T4:DG27").Borders.LineStyle = True
 
 
 End Sub

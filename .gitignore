@@ -6,3 +6,5 @@ bin/Studychart_ippan.xlsm
 vbsc.wsf
 vbac.wsf
 bin/Studychart_ippan.xlsm
+bin/StudyChart_2020.xlsm
+src/StudyChart_2020.xlsm/Module1.bas
