@@ -21,7 +21,7 @@ Begin(2) = 80
 End Function
 
 Sub addUniversity()
-Attribute addUniversity.VB_ProcData.VB_Invoke_Func = "J\n14"
+Attribute addUniversity.VB_ProcData.VB_Invoke_Func = "JÄn14"
 
 
 Columns("BS").Hidden = True
@@ -66,17 +66,17 @@ For i = 4 To 27 Step 1
         d = Day(Schedule(k))
         
         'óLå¯îÕàÕì‡Ç»ÇÁêFïtÇØ
-        If m <= 3 And m >= 1 Then
+        If (m <= 3 And m >= 1) Or m = 12 Then
         Dim r As Integer
+        If m = 12 Then
+             r = 20
+        Else
+            r = Begin(m - 1) + d
         
-        r = Begin(m - 1) + d
+        End If
         
         Cells(i, r).Interior.Color = Color(k)
         Cells(i, r).Value = Mark(k)
-        
-        ElseIf m = 12 Then
-        Cells(i, 11).Interior.Color = Color(k)
-        Cells(i, 11).Value = Mark(k)
         End If
         
         Next k
